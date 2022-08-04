@@ -14,12 +14,12 @@ public class RecipientFactory {
     public Recipient createRecipient() {
         Scanner scan = new Scanner(System.in);
 
-        switch (scan.next().toLowerCase()) {
-            
-            case "personal":
+        System.out.print("Enter recipient type : ");
+        this.type = scan.nextLine();
 
-                System.out.print("Enter recipient type : ");
-                this.type = scan.nextLine();
+        switch (type.toLowerCase()) {
+
+            case "personal":
 
                 System.out.print("Enter recipient name : ");
                 this.name = scan.nextLine();
@@ -36,9 +36,6 @@ public class RecipientFactory {
 
             case "official":
 
-                System.out.print("Enter recipient type : ");
-                this.type = scan.nextLine();
-
                 System.out.print("Enter recipient name : ");
                 this.name = scan.nextLine();
 
@@ -51,8 +48,6 @@ public class RecipientFactory {
                 return new OfficialRecipient(name, email, designation);
 
             case "official_personal":
-                System.out.print("Enter recipient type : ");
-                this.type = scan.nextLine();
 
                 System.out.print("Enter recipient name : ");
                 this.name = scan.nextLine();
@@ -66,6 +61,7 @@ public class RecipientFactory {
                 return null;
 
             default:
+                System.out.print("Invalid Recipient Type.! ");
                 return null;
 
         }
