@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="268582f1-263c-42bd-ba74-b3801b49ca4d" name="Changes" comment="created package - Add Recipient to add recipients">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AddRecipient/OfficialRecipient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AddRecipient/PersonalRecipient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AddRecipient/Recipient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AddRecipient/RecipientFactory.java" afterDir="false" />
+    <list default="true" id="268582f1-263c-42bd-ba74-b3801b49ca4d" name="Changes" comment="modify file - RecipientFactory">
+      <change afterPath="$PROJECT_DIR$/birthdays.ser" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ClientDetails/DataManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ClientDetails/RecipientData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ClientDetails/UserData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Operations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userData.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Email_Client Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Email_Client Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddRecipient/OfficialRecipient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddRecipient/OfficialRecipient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddRecipient/PersonalRecipient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddRecipient/PersonalRecipient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddRecipient/Recipient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddRecipient/Recipient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddRecipient/RecipientFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddRecipient/RecipientFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,12 +53,37 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/User/Downloads/javax.mail.jar",
+    "last_opened_file_path": "C:/Users/User/Desktop/Programming/Email_Client Project",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "PLAIN_TEXT"
+    ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ClientDetails" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Email_Client Project" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -62,7 +92,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659591117602</updated>
-      <workItem from="1659591118909" duration="2146000" />
+      <workItem from="1659591118909" duration="10461000" />
+      <workItem from="1659605585758" duration="45164000" />
     </task>
     <task id="LOCAL-00001" summary="created project - Email Client">
       <created>1659591148873</created>
@@ -71,7 +102,21 @@
       <option name="project" value="LOCAL" />
       <updated>1659591148874</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="created package - Add Recipient to add recipients">
+      <created>1659593629291</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1659593629291</updated>
+    </task>
+    <task id="LOCAL-00003" summary="modify file - RecipientFactory">
+      <created>1659594252353</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1659594252353</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,19 +127,22 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="GetRecipient" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -104,6 +152,7 @@
     <MESSAGE value="created project - Email Client" />
     <MESSAGE value="created package - Add Recipient (factory method)" />
     <MESSAGE value="created package - Add Recipient to add recipients" />
-    <option name="LAST_COMMIT_MESSAGE" value="created package - Add Recipient to add recipients" />
+    <MESSAGE value="modify file - RecipientFactory" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify file - RecipientFactory" />
   </component>
 </project>

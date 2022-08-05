@@ -3,69 +3,33 @@ package AddRecipient;
 import java.util.Scanner;
 
 public class RecipientFactory {
-    private String type;
-    private String name;
-    private String email;
-    private String nickName = null;
-    private String designation = null;
-    private String birthDay = null;
 
-
-    public Recipient createRecipient() {
+    public static Recipient createRecipient() {
         Scanner scan = new Scanner(System.in);
+        System.out.print("Enter recipient : \nEx : \n     Personal : <name> <nick name> <email address> <birthday>\n     Official : <name> <email address> <designation>\n     Official_Friend : <name> <email address> <designation> <birthday>\n");
+        String[] details = scan.nextLine().strip().split("[,: ]+");
 
-        System.out.print("Enter recipient type : ");
-        this.type = scan.nextLine();
-
-        switch (type.toLowerCase()) {
+        switch (details[0].toLowerCase()) {
 
             case "personal":
-
-                System.out.print("Enter recipient name : ");
-                this.name = scan.nextLine();
-
-                System.out.print("Enter recipient email : ");
-                this.email = scan.nextLine();
-                System.out.print("Enter recipient nick name : ");
-
-                this.nickName = scan.nextLine();
-                System.out.print("Enter recipient birth day : ");
-
-                this.birthDay = scan.nextLine();
-                return new PersonalRecipient(name, nickName, email, birthDay);
+                return new PersonalRecipient()
+                        .setName(details[1])
+                        .setNickName(details[2])
+                        .setEmail(details[3])
+                        .setBirthDay(details[4]);
 
             case "official":
+                return new OfficialRecipient()
+                        .setName(details[1])
+                        .setEmail(details[2])
+                        .setDesignation(details[3]);
 
-                System.out.print("Enter recipient name : ");
-                this.name = scan.nextLine();
-
-                System.out.print("Enter recipient email : ");
-                this.email = scan.nextLine();
-
-                System.out.print("Enter recipient designation : ");
-                this.designation = scan.nextLine();
-
-                return new OfficialRecipient(name, email, designation);
-
-            case "official_personal":
-
-                System.out.print("Enter recipient name : ");
-                this.name = scan.nextLine();
-
-                System.out.print("Enter recipient email : ");
-                this.email = scan.nextLine();
-
-                System.out.print("Enter recipient designation : ");
-                this.designation = scan.nextLine();
-
+            case "official_friend":
                 return null;
 
             default:
                 System.out.print("Invalid Recipient Type.! ");
                 return null;
-
         }
-
     }
-
 }

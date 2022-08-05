@@ -1,5 +1,20 @@
 package AddRecipient;
 
-public interface Recipient {
+import java.io.Serializable;
+
+public interface Recipient extends Serializable {
+   String getName();
+   String getEmail();
+   String getType();
+   String getNickName();
+   String getBirthDay();
+   String getDesignation();
    String getData();
+
+   Recipient setEmail(String email);
+   Recipient setName(String name);
+   Recipient setNickName(String nickName);
+   Recipient setBirthDay(String birthDay);
+   Recipient setDesignation(String designation);
+
 }
