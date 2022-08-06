@@ -15,6 +15,7 @@ public abstract class DataManager {
             throw new RuntimeException(e);
         }
     }
+
     public static void writeFile(String fileName,ArrayList<String> arrayList){
         for (String message:arrayList) writeFile(fileName,message);
     }
@@ -39,7 +40,6 @@ public abstract class DataManager {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     public static Object deserializeFile(String fileName) {
@@ -47,13 +47,9 @@ public abstract class DataManager {
              ObjectInputStream ois = new ObjectInputStream(fis)) {
             return ois.readObject();
 
-        }  catch (IOException e) {
-            throw new RuntimeException(e);
-
-        } catch (ClassNotFoundException e) {
+        }  catch (IOException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-
     }
 
 

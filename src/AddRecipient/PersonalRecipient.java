@@ -49,4 +49,9 @@ public class PersonalRecipient implements Recipient {
         if (this.record==null)this.record=this.type+" : "+this.name+","+this.nickName+","+this.email+","+this.birthDay;
         return record;
     }
+
+
+//    public String getBirthDayMessage() {
+//        return null;
+//    }
 }

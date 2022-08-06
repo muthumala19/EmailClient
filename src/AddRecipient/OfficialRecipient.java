@@ -1,8 +1,7 @@
 package AddRecipient;
 
 
-
-public class OfficialRecipient implements Recipient  {
+public class OfficialRecipient implements Recipient {
 
     private final String type="Official";
     private  String name;

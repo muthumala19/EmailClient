@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="268582f1-263c-42bd-ba74-b3801b49ca4d" name="Changes" comment="modify file - RecipientFactory">
-      <change afterPath="$PROJECT_DIR$/birthdays.ser" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClientDetails/DataManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClientDetails/RecipientData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClientDetails/UserData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Operations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userData.ser" afterDir="false" />
+    <list default="true" id="268582f1-263c-42bd-ba74-b3801b49ca4d" name="Changes" comment="serialization and dezerialization done">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EmailDetails/Email.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EmailDetails/EmailFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MailServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/birthdays.ser" beforeDir="false" afterPath="$PROJECT_DIR$/birthdays.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AddRecipient/OfficialRecipient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddRecipient/OfficialRecipient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AddRecipient/PersonalRecipient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddRecipient/PersonalRecipient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AddRecipient/Recipient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddRecipient/Recipient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AddRecipient/RecipientFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddRecipient/RecipientFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientDetails/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientDetails/DataManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientDetails/RecipientData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientDetails/RecipientData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientDetails/UserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientDetails/EmailData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Operations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Operations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userData.ser" beforeDir="false" afterPath="$PROJECT_DIR$/userData.ser" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +39,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Main.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -52,8 +58,9 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/User/Desktop/Programming/Email_Client Project",
+    "last_opened_file_path": "C:/Users/User/eclipse-workspace/Email Client",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -93,7 +100,7 @@
       <option name="presentableId" value="Default" />
       <updated>1659591117602</updated>
       <workItem from="1659591118909" duration="10461000" />
-      <workItem from="1659605585758" duration="45164000" />
+      <workItem from="1659605585758" duration="73063000" />
     </task>
     <task id="LOCAL-00001" summary="created project - Email Client">
       <created>1659591148873</created>
@@ -116,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659594252353</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="serialization and dezerialization done">
+      <created>1659721878388</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1659721878388</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +167,7 @@
     <MESSAGE value="created package - Add Recipient (factory method)" />
     <MESSAGE value="created package - Add Recipient to add recipients" />
     <MESSAGE value="modify file - RecipientFactory" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify file - RecipientFactory" />
+    <MESSAGE value="serialization and dezerialization done" />
+    <option name="LAST_COMMIT_MESSAGE" value="serialization and dezerialization done" />
   </component>
 </project>
