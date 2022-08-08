@@ -10,14 +10,11 @@ public abstract class DataManager {
              BufferedWriter writer = new BufferedWriter(fw)) {
             writer.write(message);
             writer.newLine();
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        } catch (IOException e) {throw new RuntimeException(e);}
     }
 
-    public static void writeFile(String fileName,ArrayList<String> arrayList){
-        for (String message:arrayList) writeFile(fileName,message);
+    public static void writeFile(String fileName, ArrayList<String> arrayList) {
+        for (String message : arrayList) writeFile(fileName, message);
     }
 
     public static ArrayList<String> readFile(String fileName) {
@@ -27,32 +24,22 @@ public abstract class DataManager {
             ArrayList<String> arrayList = new ArrayList<>();
             while ((line = reader.readLine()) != null) arrayList.add(line);
             return arrayList;
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        } catch (IOException e) {throw new RuntimeException(e);}
     }
 
-    public static void serializeFile(String fileName, Object recipient) {
+    public static <T> void serializeFile(String fileName, T recipient) {
         try (FileOutputStream fos = new FileOutputStream(fileName);
              ObjectOutputStream oos = new ObjectOutputStream(fos)) {
             oos.writeObject(recipient);
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        } catch (IOException e) {throw new RuntimeException(e);}
     }
 
-    public static Object deserializeFile(String fileName) {
+    public static <T> T deserializeFile(String fileName) {
         try (FileInputStream fis = new FileInputStream(fileName);
              ObjectInputStream ois = new ObjectInputStream(fis)) {
-            return ois.readObject();
-
-        }  catch (IOException | ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
+            return (T)ois.readObject();
+        } catch (IOException | ClassNotFoundException e) {throw new RuntimeException(e);}
     }
-
-
 }
 
 
