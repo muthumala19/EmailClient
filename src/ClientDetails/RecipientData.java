@@ -11,5 +11,5 @@ public class RecipientData {
     public static ArrayList<String> recipientRecords=new ArrayList<>();
     public static HashMap<String,Recipient> recipients =new HashMap<>();
     public static HashMap<String,ArrayList<Recipient>> birthDayRecords =new HashMap<>();
-    public static HashMap<String,ArrayList<EmailData>> sentMails =new HashMap<>();
+    public static HashMap<String,ArrayList<MailData>> sentMails =new HashMap<>();
 }

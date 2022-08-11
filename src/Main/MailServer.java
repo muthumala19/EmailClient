@@ -1,4 +1,6 @@
-import EmailDetails.Email;
+package Main;
+
+import EmailDetails.Mail;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
@@ -8,7 +10,7 @@ import java.util.Properties;
 public class MailServer {
 
 
-    public static void mailServer(Email email, String recipients) {
+    public static void mailServer(Mail email, String recipients) {
 
         final String username = "muthumalatestmail@gmail.com";
         final String password = "dmuhwiqzfnpoeihx";
@@ -33,7 +35,7 @@ public class MailServer {
             message.setSubject(email.getSubject());
             message.setText(email.getMessage());
             Transport.send(message);
-            System.out.println("Done");
+//            System.out.println("Done");
         } catch (MessagingException e) {
             e.printStackTrace();
         }

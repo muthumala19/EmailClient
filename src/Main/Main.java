@@ -1,12 +1,14 @@
+package Main;
+
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
-//        Operations.clearData();
+        Operations.clearData();
         Operations.loadData();
-//        Operations.sendBirthdayMail();
+        Operations.sendBirthdayMail();
         Scanner scanner = new Scanner(System.in);
         System.out.println("""
                 Enter option type:\s
