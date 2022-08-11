@@ -40,16 +40,17 @@ public abstract class Operations {
         RecipientData.recipientRecords.add(user.getData());
     }
     public static void sendBirthdayMail(){
-        StringBuilder to= new StringBuilder();
-        for (Recipient r:RecipientData.birthDayRecords.get(RecipientData.today)) to.append(r.getBirthDay());
-        Email e=EmailFactory.createBirthDayEmail(RecipientData.today, to.toString());
-        updateEmailList(e, to.toString());
+        String to =null;
+        if(RecipientData.birthDayRecords.get(RecipientData.today)==null)return;
+        for (Recipient r:RecipientData.birthDayRecords.get(RecipientData.today)) to+=r.getEmail();
+        Email e=EmailFactory.createBirthDayEmail(RecipientData.today, to);
+//        updateEmailList(e, to);
     }
     public static void sendNormalMail(){
         System.out.print("Enter Recipients : ");
-        String to=scanner.next();
-        String[] toList = scanner.nextLine().strip().split("[, ]+");
-        for (String email :toList) if(EmailFactory.isNotValidEmailAddress(email))return;
+        String to=scanner.nextLine();
+        String[] toList = to.strip().split("[, ]+");
+        for (String email :toList) if(!EmailFactory.isValidEmailAddress(email))return;
         Email e=EmailFactory.createNormalEmail(to);
         updateEmailList(e,to);
     }
@@ -66,7 +67,7 @@ public abstract class Operations {
     public static void createRecipient() {
         System.out.print("Enter recipient : \nEx : \n     Personal : <name> <email address> <nick name> <birthday>\n     Official : <name> <email address> <designation>\n     Official_Friend : <name> <email address> <designation> <birthday>\n");
         String[] details = scanner.nextLine().strip().split("[,: ]+");
-        if(EmailFactory.isNotValidEmailAddress(details[2]))return;
+        if(!EmailFactory.isValidEmailAddress(details[2]))return;
         if (RecipientData.recipients.containsKey(details[2])) {
             System.out.println("Already exist user..");
             return;

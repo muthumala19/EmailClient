@@ -19,28 +19,21 @@ public class MailServer {
         prop.put("mail.smtp.auth", "true");
         prop.put("mail.smtp.starttls.enable", "true"); //TLS
 
-        Session session = Session.getInstance(prop,
-                new javax.mail.Authenticator() {
-                    protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication(username, password);
-                    }
-                });
+        Session session = Session.getInstance(prop, new javax.mail.Authenticator() {
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(username, password);
+            }
+        });
 
         try {
 
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress("muthumalatestmail@gmail.com"));
-            message.setRecipients(
-                    Message.RecipientType.TO,
-                    InternetAddress.parse(recipients)
-            );
+            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(recipients));
             message.setSubject(email.getSubject());
             message.setText(email.getMessage());
-
             Transport.send(message);
-
             System.out.println("Done");
-
         } catch (MessagingException e) {
             e.printStackTrace();
         }

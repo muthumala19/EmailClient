@@ -34,11 +34,13 @@ public class Email implements Serializable {
 
     public Email setMessage(String userId) {
         if (isBirthdayMessage) {
-            if (RecipientData.recipients.get(userId).getType().equalsIgnoreCase("personal")){
-                this.message = "hugs and love on your birthday";
-            } else {
-                this.message = "Wish you a Happy Birthday";
-            }
+            if (RecipientData.recipients
+                    .get(userId)
+                    .getType()
+                    .equalsIgnoreCase("personal")
+            )
+            {this.message = "hugs and love on your birthday";
+            } else {this.message = "Wish you a Happy Birthday";}
         }
         return this;
 

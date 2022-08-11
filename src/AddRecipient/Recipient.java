@@ -1,6 +1,7 @@
 package AddRecipient;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 
 public interface Recipient extends Serializable {
    String getName();

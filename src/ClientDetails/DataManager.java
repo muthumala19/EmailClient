@@ -34,6 +34,7 @@ public abstract class DataManager {
         } catch (IOException e) {throw new RuntimeException(e);}
     }
 
+    @SuppressWarnings("unchecked")
     public static <T> T deserializeFile(String fileName) {
         try (FileInputStream fis = new FileInputStream(fileName);
              ObjectInputStream ois = new ObjectInputStream(fis)) {
