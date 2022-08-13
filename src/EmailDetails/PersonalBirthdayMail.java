@@ -1,16 +1,13 @@
 package EmailDetails;
 
-import java.util.Scanner;
-
-public class PersonalBirthdayMail implements Mail{
+public class PersonalBirthdayMail implements Mail {
     private String to;
     private String subject;
     private String message;
-//    private static Scanner scanner=new Scanner(System.in);
 
     @Override
     public Mail setSubject() {
-        this.subject="Birthday Wishes.!";
+        this.subject = "Birthday Wishes.!";
         return this;
     }
 
@@ -21,7 +18,7 @@ public class PersonalBirthdayMail implements Mail{
 
     @Override
     public Mail setMessage() {
-        this.message="hugs and love on your birthday";
+        this.message = "hugs and love on your birthday";
         return this;
     }
 
@@ -32,7 +29,7 @@ public class PersonalBirthdayMail implements Mail{
 
     @Override
     public Mail setTo(String to) {
-        this.to=to;
+        this.to = to;
         return this;
     }
 

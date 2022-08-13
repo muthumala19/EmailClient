@@ -2,16 +2,16 @@ package EmailDetails;
 
 import java.util.Scanner;
 
-public class NormalMail implements Mail{
+public class NormalMail implements Mail {
     private String to;
     private String subject;
     private String message;
-    private static final Scanner scanner=new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
     @Override
     public Mail setSubject() {
         System.out.print("Enter Subject : ");
-        this.subject= scanner.nextLine();
+        this.subject = scanner.nextLine();
         return this;
     }
 
@@ -23,7 +23,7 @@ public class NormalMail implements Mail{
     @Override
     public Mail setMessage() {
         System.out.print("Enter Message : ");
-        this.message=scanner.nextLine();
+        this.message = scanner.nextLine();
         return this;
     }
 
@@ -34,7 +34,7 @@ public class NormalMail implements Mail{
 
     @Override
     public Mail setTo(String to) {
-        this.to= to;
+        this.to = to;
         return this;
     }
 

@@ -1,6 +1,6 @@
 package EmailDetails;
 
-public class OfficialFriendMail implements Mail{
+public class OfficeFriendMail implements Mail {
     private String to;
     private String subject;
     private String message;
@@ -8,7 +8,7 @@ public class OfficialFriendMail implements Mail{
 
     @Override
     public Mail setSubject() {
-        this.subject="Birthday Wishes.!";
+        this.subject = "Birthday Wishes.!";
         return this;
     }
 
@@ -19,7 +19,7 @@ public class OfficialFriendMail implements Mail{
 
     @Override
     public Mail setMessage() {
-        this.message="Wish you a Happy Birthday";
+        this.message = "Wish you a Happy Birthday";
         return this;
     }
 
@@ -30,10 +30,9 @@ public class OfficialFriendMail implements Mail{
 
     @Override
     public Mail setTo(String to) {
-        this.to=to;
+        this.to = to;
         return this;
     }
-
     @Override
     public String getTo() {
         return this.to;
