@@ -1,13 +1,16 @@
 package AddRecipient;
 
+import Main.Operations;
+
 import java.time.LocalDate;
 
-public class OfficialRecipient implements Recipient {
-
-    private final String type="Official";
+public class OfficeFriendRecipient implements Recipient{
+    private final String type = "Office_friend";
+    private LocalDate formattedBirthday;
     private  String name;
     private  String email;
-    private  String designation;
+    private String designation;
+    private String birthDay;
     private String record;
 
     @Override
@@ -17,7 +20,7 @@ public class OfficialRecipient implements Recipient {
     }
     @Override
     public Recipient setNickName(String nickName) {
-        return null;
+        return this;
     }
     @Override
     public Recipient setEmail(String email) {
@@ -25,13 +28,16 @@ public class OfficialRecipient implements Recipient {
         return this;
     }
     @Override
+    public Recipient setBirthDay(String birthDay) {
+        this.formattedBirthday = LocalDate.parse(birthDay);
+        this.birthDay= Operations.dateFormatter("yyyy/MM/dd",this.formattedBirthday);
+        return this;}
+    @Override
     public Recipient setDesignation(String designation) {
         this.designation=designation;
         return this;
     }
 
-    @Override
-    public Recipient setBirthDay(String birthDay) {return this;}
 
     @Override
     public String getEmail() {return this.email;}
@@ -39,11 +45,11 @@ public class OfficialRecipient implements Recipient {
     public String getType() {return this.type;}
 
     @Override
-    public LocalDate getBirthDay() {return null; }
+    public LocalDate getBirthDay() {return this.formattedBirthday;}
 
     @Override
     public String getData() {
-        if (this.record==null)this.record=this.type+" : "+this.name+","+this.email+","+this.designation;
+        if (this.record==null)this.record=this.type+" : "+this.name+","+this.email+","+","+this.designation+","+this.birthDay;
         return this.record;
     }
 }

@@ -6,9 +6,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Operations.clearData();
+//        Operations.clearData();
         Operations.loadData();
-        Operations.sendBirthdayMail();
         Scanner scanner = new Scanner(System.in);
         System.out.println("""
                 Enter option type:\s
@@ -27,6 +26,7 @@ public class Main {
             case 4 -> Operations.showSendMails();
             case 5 -> Operations.getNoOfRecipient();
         }
+        Operations.sendBirthdayMail();
         Operations.releaseData();
     }
 }

@@ -21,8 +21,12 @@ public class RecipientFactory {
                         .setEmail(details[2])
                         .setDesignation(details[3]);
 
-            case "official_friend":
-                return null;
+            case "office_friend":
+                return new OfficeFriendRecipient()
+                        .setName(details[1])
+                        .setEmail(details[2])
+                        .setDesignation(details[3])
+                        .setBirthDay(details[4]);
 
             default:
                 System.out.print("Invalid Recipient Type.! ");

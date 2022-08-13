@@ -4,12 +4,9 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 public interface Recipient extends Serializable {
-   String getName();
    String getEmail();
    String getType();
-   String getNickName();
-   String getBirthDay();
-   String getDesignation();
+   LocalDate getBirthDay();
    String getData();
 
    Recipient setEmail(String email);

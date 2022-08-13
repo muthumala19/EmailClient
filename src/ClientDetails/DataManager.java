@@ -13,10 +13,6 @@ public abstract class DataManager {
         } catch (IOException e) {throw new RuntimeException(e);}
     }
 
-    public static void writeFile(String fileName, ArrayList<String> arrayList) {
-        for (String message : arrayList) writeFile(fileName, message);
-    }
-
     public static ArrayList<String> readFile(String fileName) {
         try (FileReader fr = new FileReader(fileName);
              BufferedReader reader = new BufferedReader(fr)) {
@@ -28,15 +24,23 @@ public abstract class DataManager {
     }
 
     public static <T> void serializeFile(String fileName, T recipient) {
-        try (FileOutputStream fos = new FileOutputStream(fileName);
+        File file=new File(fileName);
+        try (FileOutputStream fos = new FileOutputStream(file);
              ObjectOutputStream oos = new ObjectOutputStream(fos)) {
             oos.writeObject(recipient);
         } catch (IOException e) {throw new RuntimeException(e);}
     }
 
     @SuppressWarnings("unchecked")
-    public static <T> T deserializeFile(String fileName) {
-        try (FileInputStream fis = new FileInputStream(fileName);
+    public static <T> T deserializeFile(String fileName,Object obj) {
+        File  file= new File(fileName);
+        try {
+            file.createNewFile();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        if (file.length()==0) return (T) obj;
+        try (FileInputStream fis = new FileInputStream(file);
              ObjectInputStream ois = new ObjectInputStream(fis)) {
             return (T)ois.readObject();
         } catch (IOException | ClassNotFoundException e) {throw new RuntimeException(e);}
