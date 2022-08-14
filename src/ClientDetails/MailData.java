@@ -18,7 +18,7 @@ public class MailData implements Serializable {
     }
 
     public void setRecord() {
-        this.record = "Sub : " + mailAddress.getSubject() + " , message : " + mailAddress.getMessage() + "-" + RecipientData.author;
+        this.record = "Subject : " + mailAddress.getSubject() + " , message : " + mailAddress.getMessage() + "-" + RecipientData.author;
     }
 
 

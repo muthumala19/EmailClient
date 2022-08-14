@@ -13,8 +13,8 @@ public class MailFactory {
             case "Personal" -> {
                 return new PersonalBirthdayMail().setTo(emailAddress).setSubject().setMessage();
             }
-            case "Office_Friend" -> {
-                return new OfficeFriendMail().setTo(emailAddress).setSubject().setSubject();
+            case "Office_friend" -> {
+                return new OfficeFriendMail().setTo(emailAddress).setSubject().setMessage();
             }
             default -> throw new IllegalStateException("Unexpected value: " + type);
         }

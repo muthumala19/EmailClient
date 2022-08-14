@@ -53,6 +53,7 @@ public abstract class Operations {
 
     //update all the  user details to relevant locations
     private static void update(Recipient user) {
+        if(dateFormatter("MM/dd",user.getBirthDay()).equals(dateFormatter("MM/dd",RecipientData.today))) sendAndUpdate(user);
         String date = dateFormatter("MM/dd", user.getBirthDay());
         if (!RecipientData.birthDayRecords.containsKey(date)) {
             RecipientData.birthDayRecords.put(date, new ArrayList<>());
@@ -65,8 +66,8 @@ public abstract class Operations {
 
     //format LocalDate object to String of given pattern
     public static String dateFormatter(String pattern, LocalDate date) {
-        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern(pattern);
-        return date.format(myFormatObj);
+        DateTimeFormatter obj = DateTimeFormatter.ofPattern(pattern);
+        return date.format(obj);
 
     }
 
@@ -75,10 +76,13 @@ public abstract class Operations {
         if (RecipientData.today.equals(RecipientData.date)) return;
         String today = Operations.dateFormatter("MM/dd", RecipientData.today);
         if (RecipientData.birthDayRecords.get(today) == null) return;
-        for (Recipient r : RecipientData.birthDayRecords.get(today)) {
-            Mail e = MailFactory.createBirthdayMail(r.getType(), r.getEmail());
-            updateEmailList(e, r.getEmail());
-        }
+        for (Recipient r : RecipientData.birthDayRecords.get(today)) sendAndUpdate(r);
+    }
+
+
+    private static void sendAndUpdate(Recipient r) {
+        Mail e = MailFactory.createBirthdayMail(r.getType(), r.getEmail());
+        updateEmailList(e, r.getEmail());
     }
 
     //send normal mails

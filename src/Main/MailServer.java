@@ -37,7 +37,8 @@ public class MailServer {
             Transport.send(message);
 //            System.out.println("Done");
         } catch (MessagingException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.out.println("Error Occurred.!");
         }
     }
 

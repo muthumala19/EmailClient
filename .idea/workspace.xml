@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="268582f1-263c-42bd-ba74-b3801b49ca4d" name="Changes" comment="made a correction for read a file to automatically generate a file.">
+    <list default="true" id="268582f1-263c-42bd-ba74-b3801b49ca4d" name="Changes" comment="full code added in one text file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/birthdays.ser" beforeDir="false" afterPath="$PROJECT_DIR$/birthdays.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/clientList.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date.ser" beforeDir="false" afterPath="$PROJECT_DIR$/date.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipients.ser" beforeDir="false" afterPath="$PROJECT_DIR$/recipients.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientDetails/MailData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientDetails/MailData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EmailDetails/MailFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EmailDetails/MailFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/MailServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/MailServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Operations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Operations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userData.ser" beforeDir="false" afterPath="$PROJECT_DIR$/userData.ser" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +113,9 @@
       <workItem from="1660243792766" duration="9417000" />
       <workItem from="1660269400155" duration="25161000" />
       <workItem from="1660444557593" duration="2040000" />
+      <workItem from="1660465285709" duration="895000" />
+      <workItem from="1660475565267" duration="649000" />
+      <workItem from="1660485855004" duration="5812000" />
     </task>
     <task id="LOCAL-00001" summary="created project - Email Client">
       <created>1659591148873</created>
@@ -181,7 +194,21 @@
       <option name="project" value="LOCAL" />
       <updated>1660445193222</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="made a correction for read a file to automatically generate a file.">
+      <created>1660466074227</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1660466074227</updated>
+    </task>
+    <task id="LOCAL-00013" summary="full code added in one text file">
+      <created>1660466113730</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1660466113730</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +253,7 @@
     <MESSAGE value="Entire project completed" />
     <MESSAGE value="project is done" />
     <MESSAGE value="made a correction for read a file to automatically generate a file." />
-    <option name="LAST_COMMIT_MESSAGE" value="made a correction for read a file to automatically generate a file." />
+    <MESSAGE value="full code added in one text file" />
+    <option name="LAST_COMMIT_MESSAGE" value="full code added in one text file" />
   </component>
 </project>
