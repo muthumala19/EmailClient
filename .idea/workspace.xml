@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="268582f1-263c-42bd-ba74-b3801b49ca4d" name="Changes" comment="project is done">
+    <list default="true" id="268582f1-263c-42bd-ba74-b3801b49ca4d" name="Changes" comment="made a correction for read a file to automatically generate a file.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/clientList.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientDetails/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientDetails/DataManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +102,7 @@
       <workItem from="1660127487595" duration="767000" />
       <workItem from="1660243792766" duration="9417000" />
       <workItem from="1660269400155" duration="25161000" />
-      <workItem from="1660444557593" duration="529000" />
+      <workItem from="1660444557593" duration="2040000" />
     </task>
     <task id="LOCAL-00001" summary="created project - Email Client">
       <created>1659591148873</created>
@@ -176,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660390334968</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="made a correction for read a file to automatically generate a file.">
+      <created>1660445193222</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1660445193222</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +225,7 @@
     <MESSAGE value="created project with automatic sending mails. (Date handling need to be improved)" />
     <MESSAGE value="Entire project completed" />
     <MESSAGE value="project is done" />
-    <option name="LAST_COMMIT_MESSAGE" value="project is done" />
+    <MESSAGE value="made a correction for read a file to automatically generate a file." />
+    <option name="LAST_COMMIT_MESSAGE" value="made a correction for read a file to automatically generate a file." />
   </component>
 </project>
