@@ -16,7 +16,13 @@ public abstract class DataManager {
     }
 
     public static ArrayList<String> readFile(String fileName) {
-        try (FileReader fr = new FileReader(fileName);
+        File file=new File(fileName);
+        try {
+            file.createNewFile();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        try (FileReader fr = new FileReader(file);
              BufferedReader reader = new BufferedReader(fr)) {
             String line;
             ArrayList<String> arrayList = new ArrayList<>();
